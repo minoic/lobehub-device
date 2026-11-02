@@ -5,3 +5,4 @@ RUN test -n "$CLI_VERSION" && npm install -g "@lobehub/cli@${CLI_VERSION}" && np
 
 USER node
 WORKDIR /workspace
+CMD ["lh", "connect"]
