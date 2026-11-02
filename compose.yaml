@@ -1,0 +1,14 @@
+services:
+  lobehub-device:
+    image: ghcr.io/minoic/lobehub-device:0.0.73
+    hostname: lobehub-device
+    restart: unless-stopped
+    init: true
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./workspace:/workspace
+      - lobehub-home:/home/node
+
+volumes:
+  lobehub-home:
